@@ -15,31 +15,11 @@ namespace Task11
 
 
             ComplexNumber num6 = new ComplexNumber(2);
-            Vector<ComplexNumber> vec1 = new Vector<ComplexNumber>(new ComplexNumber[] { num1, num2 });
-            Vector<ComplexNumber> vec2 = new Vector<ComplexNumber>(new ComplexNumber[] { num3, num4 });
-
-            num4.DivideByZero += func;
-            Vector<int> vc = new Vector<int>(new int[] { 0 });
-            Console.WriteLine(num1.Module);
+            ConsoleWrite("Sum", num1 + num2);
+            ConsoleWrite("Minus", num2 - num1);
+            ConsoleWrite("Mult", num1*num2);
+            ConsoleWrite("Divide", num1/num2);
             
-            Console.WriteLine(vec1+vec2);
-            Console.WriteLine("{0}",ComplexNumber.Root(num6,2));
-            
-            //num4 = num4 / num5;
-            /*
-            List<Vector<ComplexNumber>> ls = new List<Vector<ComplexNumber>>();
-            ls.Add(vec1);
-            ls.Add(vec2);
-
-            ls = Vector<ComplexNumber>.orthogonalize(ls);
-
-            foreach(var val in ls)
-            {
-                  Console.WriteLine(val);
-            }
-
-            Console.WriteLine(ls[0] * ls[1]);
-            */
            
         }
         static public void func(object obj, DivideByZeroEventArgs args)
